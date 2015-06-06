@@ -28,12 +28,12 @@ function WARCStream(opts) {
   this.state = STATE.PROTOCOL;
   this.data = new Buffer(0);
   this.content = new Buffer(0);
-  this.separator = new Buffer('\r\n\r\n');
+  this.separator = new Buffer('\n\n');
   this.offset = 0;
   this.protocol = null;
   this.headers = {};
   this.contentLength = 0;
-  this.matcher = new Buffer('\r\n');
+  this.matcher = new Buffer('\n');
 }
 
 util.inherits(WARCStream, stream.Transform);

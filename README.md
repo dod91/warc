@@ -7,6 +7,8 @@ Parse WARC (Web Archive Files) as a node.js stream
 This stream parses the Web Archive file format as used by the
 [Common Crawl](http://commoncrawl.org/the-data/get-started/) project.
 
+This repository is a fork of [Eugeneware/warc](https://github.com/eugeneware/warc) made for parsing Clueweb09.
+
 NB: That this stream doesn't do any gzip decompression, it assumes a
 decompressed WARC file format. The WARC files that use used by common-crawl
 are actually multi-part Gzip files, and there is a [big bug](https://github.com/joyent/node/pull/6442) with the `zlib` library which is present as of the time of writing (node `0.10.32`) which
